@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(116, 92, 26);
+  color: #eaeaea;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(231, 154, 10, 0.7);
+  border-bottom: 3px solid rgba(255, 188, 62, 0.7);
+  position: fixed;
+  z-index: 9999;
+  right: 0;
+  left: 0;
+  height: 5rem;
+}
+
+.halaman li {
+  margin-top: 0.4rem;
+}
+
+.halaman a {
+  color: #eaeaea;
+  text-decoration: none;
+  padding: 2px 4px;
+  background-color: rgba(238, 150, 18, 0);
+}
+
+.halaman a:hover {
+  color: rgb(31, 27, 27);
+  background-color: #eaeaea;
+}
+
+.bagian li {
+  margin-top: 0.4rem;
+}
+
+.bagian a {
+  text-decoration: none;
+  color: #eaeaea;
+  padding: 2px 4px;
+  background-color: rgba(238, 150, 18, 0);
+}
+
+.bagian a:hover {
+  color: rgb(31, 27, 27);
+  background-color: #eaeaea;
+}
+
+.garis {
+  padding-top: 10rem;
+}
+
+/* display */
+.display {
+  padding: 0 4%;
+}
+
+.display .judul-display {
+  margin: 0 0 1rem 3rem;
+  background-color: #377009;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-variant: small-caps;
+}
+
+.value-display h3 {
+  padding: 5px 0 5px 0;
+}
+
+.display dl dd li {
+  padding-left: 2rem;
+}
+
+/* dimensi dan overflow */
+
+.dimensi-overflow {
+  padding: 2rem 4% 0 4%;
+}
+
+.judul-dimensi {
+  margin: 0 0 1rem 3rem;
+  background-color: #377009;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-variant: small-caps;
+}
+
+.dimensi dd li {
+  padding-left: 2rem;
+}
+
+.b-overflow {
+  padding: 1rem 0 0.5rem 0;
+}
+
+.properti-overflow dd li {
+  margin-left: 2rem;
+}
+
+/* belajar box-model */
+.box-model {
+  margin: 2rem 4% 0 4%;
+}
+
+.box-model .judul-box-model {
+  margin: 0 0 1rem 3rem;
+  background-color: #377009;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-variant: small-caps;
+}
+
+.empat-bagian dd li {
+  margin-left: 2rem;
+}
+
+.c1 {
+  width: 77rem;
+
+  margin-top: 2rem;
+}
+
+.c1 .margin {
+  width: 26rem;
+  height: 27rem;
+  background-color: rgb(44, 44, 143);
+  float: left;
+  padding-right: 7px;
+  box-sizing: border-box;
+}
+
+.margin h3 {
+  text-align: center;
+}
+
+.margin p {
+  margin: 2rem 0 1rem 2rem;
+}
+
+.margin dl dd li {
+  margin-left: 2rem;
+}
+
+.margin .overlapping {
+  margin-left: 1rem;
+}
+
+.c1 .padding {
+  width: 25rem;
+  height: 27rem;
+  background-color: rgb(121, 40, 94);
+  float: left;
+  margin-left: 6px;
+  padding-right: 7px;
+  box-sizing: border-box;
+}
+
+.padding h3 {
+  text-align: center;
+}
+
+.padding p {
+  margin: 2rem 0 1rem 2rem;
+}
+
+.padding dl dd li {
+  margin-left: 2rem;
+}
+
+.padding ul li {
+  margin-left: 1rem;
+}
+
+.c1 .border {
+  width: 25rem;
+  height: 27rem;
+  background-color: rgb(26, 114, 110);
+  float: left;
+  margin-left: 6px;
+  padding-right: 7px;
+  box-sizing: border-box;
+}
+
+.border h3 {
+  text-align: center;
+}
+
+.border .pakai-border {
+  margin: 2rem 0 1rem 2rem;
+}
+
+.border dl dd li {
+  margin-left: 2rem;
+}
+
+.border .style-border {
+  margin: 0.7rem 0 0.5rem 2rem;
+}
+
+.box-sizings {
+  margin-top: 2rem;
+}
+
+.box-sizing dd li {
+  margin-left: 2rem;
+}
+
+.clear {
+  clear: both;
+}
+
+/* belajar flot */
+.float {
+  margin: 2rem 4% 0 4%;
+}
+
+.float .judul-float {
+  display: inline-block;
+  margin: 2rem 0 1rem 3rem;
+  padding: 1rem 2rem;
+  background-color: #377009;
+  font-variant: small-caps;
+}
+
+.float .value-float,
+.float .cara-menggunakan-float,
+.dilakukan-float,
+.contoh-float,
+.properti-clear {
+  margin-top: 1rem;
+}
+
+.float dd li {
+  margin-left: 2rem;
+}
+
+.properti-clear {
+  background-color: #284d0a;
+  display: inline-block;
+  padding: 1rem 2rem;
+}
+
+.contoh {
+  width: 400px;
+  height: 200px;
+  border: 2px solid rgb(41, 32, 32);
+  padding: 2px 2px;
+}
+
+.contoh .img-contoh {
+  width: 150px;
+  float: left;
+  padding: 3px 3px;
+}
+
+/* belajar position */
+.position {
+  margin: 2rem 4% 0 4%;
+}
+
+.position .position-judul {
+  margin: 0 0 1rem 3rem;
+  background-color: #377009;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-variant: small-caps;
+}
+
+.position dl dd li {
+  margin-left: 2rem;
+}
+
+.position .value-position,
+.keterangan-value-position,
+.z-index {
+  margin-top: 1rem;
+}
+
+/* footer */
+footer {
+  background-color: #d67e0c;
+  text-align: center;
+  padding: 1rem 0 1rem;
+  margin-top: 3rem;
+}
+
+footer .social {
+  padding: 1rem;
+}
+footer .social a {
+  color: #eaeaea;
+  margin: 1rem;
+}
+
+footer .social a:hover {
+  color: #284d0a;
+}
+
+footer .links {
+  margin-bottom: 1rem;
+}
+
+footer .links a {
+  margin: 1rem;
+  color: #eaeaea;
+  text-decoration: none;
+}
+
+footer .links a:hover {
+  color: #284d0a;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: rgb(32, 32, 32);
+  font-weight: bold;
+}
+
+/* media quary */
+@media (max-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+
+  .c1 {
+    position: relative;
+
+    width: 100%;
+    height: 83rem;
+  }
+
+  .c1 .margin {
+    width: 100%;
+    height: 28rem;
+  }
+
+  .c1 .padding {
+    width: 100%;
+    position: absolute;
+    top: 28rem;
+    margin: auto;
+  }
+
+  .c1 .border {
+    width: 100%;
+    height: 30rem;
+    position: absolute;
+    top: 55rem;
+    margin: auto;
+  }
+
+  .clear {
+    clear: both;
+  }
+}

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layouting</title>
+
+    <!-- feather icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <ul class="halaman">
+        <li>
+          <a href="https://akbar120899.github.io/dasar-html/">html dasar</a>
+        </li>
+        <li>
+          <a href="https://akbar120899.github.io/css-dasar/">css dasar</a>
+        </li>
+        <li><a href="https://akbar120899.github.io/css-3/">css 3</a></li>
+        <li>
+          <a href="https://akbar120899.github.io/css-flexbox/">css flexbox</a>
+        </li>
+        <li><a href="https://akbar120899.github.io/css-grid/">css grid</a></li>
+      </ul>
+      <h1 class="judul">CSS LAYOUTING</h1>
+      <ul class="bagian">
+        <li><a href="#dimensidanoverflow">dimensi</a></li>
+        <li><a href="#box-models">box-model</a></li>
+        <li><a href="#judul-float">float</a></li>
+        <li><a href="#judul-position">position</a></li>
+      </ul>
+    </div>
+
+    <div class="garis"></div>
+
+    <!-- belajar display -->
+    <section class="display">
+      <h1 class="judul-display"># Display</h1>
+      <ul class="devinisi">
+        <li>
+          setiap tag pada html berada di dalam sebuah <span>kotak</span>.
+          seperti <span>display</span> pada css mengatur perilaku dari kotak
+          tersebut
+        </li>
+        <li>
+          setiap tag pada html memiliki nilai default untuk property
+          <span>display</span>. tapi kita juga dapat mengubah perilaku dari tag
+          tersebut dengan mengganti valuenya
+        </li>
+      </ul>
+
+      <div class="value-display">
+        <h3>value dari display ini ada empat</h3>
+        <dl>
+          <dt><li>inline</li></dt>
+          <dd>
+            <li type="circle">
+              elemen yang tidak menambahkan baris baru ketika di buat
+            </li>
+            <li type="circle">
+              lebar dan tinggi elemennya sebesar konten yang ada di dalamnya
+            </li>
+            <li type="circle">
+              kita tidak dapat mengatur tinggi dan lebar elemen inline kecuali
+              pada gambar
+            </li>
+            <li type="circle">
+              margin dan padding hanya mempengaruhi elelemen secara horisontal,
+              tidak vrtikal
+            </li>
+          </dd>
+          <dt><li>inline-block</li></dt>
+          <dd>
+            <li type="circle">
+              tidak ada elemen yang secara default memiliki property display:
+              inline-block
+            </li>
+            <li type="circle">
+              kita harus ubah secara manual property tersebut
+            </li>
+            <li type="circle">perilaku dasarnya sama dengan elemen inline</li>
+            <li type="circle">
+              perbedaannya, elemen inline-block ini dapat kita atur tinggi dan
+              lebarnya
+            </li>
+          </dd>
+          <dt><li>block</li></dt>
+          <dd>
+            <li type="circle">
+              elelemen html yang secara default menambahkan baris baru ketika
+              dibuat
+            </li>
+          </dd>
+          <dd>
+            <li type="circle">
+              jika tidak diatur lebarnya, maka lebar default elemen block akan
+              memenuhi lebar dari browser/paretnya
+            </li>
+          </dd>
+          <dd>
+            <li type="circle">
+              kita dapat mengatur tinggi dan lebar dari elemen block
+            </li>
+          </dd>
+          <dd>
+            <li type="circle">
+              di dalam elemen block, kita dapat menyimpan tag dengan elemen
+              inline, inline-block, atau bahkan elemen block lagi
+            </li>
+          </dd>
+          <dt><li>none</li></dt>
+          <dd>
+            <li type="circle">diginakan untuk menghilangkan sebuah elemen</li>
+          </dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- belajar dimensi dan overflow -->
+    <section class="dimensi-overflow">
+      <h1 id="dimensidanoverflow" class="judul-dimensi">
+        # Dimensi & Overflow
+      </h1>
+      <h3>A. dimensi</h3>
+      <dl class="dimensi">
+        <dt>
+          <li>dimensi memiliki 2 properti</li>
+        </dt>
+        <dd>
+          <li type="circle">width : untuk menentukan lebar pada elemen</li>
+          <li type="circle">height : untuk menentukan tinggi pada elemen</li>
+        </dd>
+      </dl>
+      <h3 class="b-overflow">B. Overflow</h3>
+      <p>
+        overflow untuk mengatur elemen yang tidak cukup tempatnya dari parentnya
+      </p>
+      <p>
+        overflow di gunakan ketika widt atau height tidak absolute/tidak relatif
+        terhadap konten yang ad di dalamnya. lebih tepatnya jika konten tidak
+        muat dari parentnya
+      </p>
+      <p>ada empat properti di dalam overflow</p>
+      <dl class="properti-overflow">
+        <dt>
+          <li>visible</li>
+        </dt>
+        <dd>
+          <li type="circle">ini adalah default overflow.</li>
+          <li type="circle">
+            kalau ad elemen yang keluar dari parentnya maka akan di perlihatkan
+            atau menyesuaikan
+          </li>
+        </dd>
+        <dt><li>auto</li></dt>
+        <dd>
+          <li type="circle">
+            css akan secara otomatis scrool ketika kontennya sudah tdk cukup
+            lagi
+          </li>
+          <li type="circle">
+            jika kontenya cukup maka kontenya hilang secara otomatis
+          </li>
+        </dd>
+        <dt><li>hidden</li></dt>
+        <dd>
+          <li type="circle">
+            jika konten melebihi batas parentnya maka konten tersebut akan
+            hilang/ tidak terlihat
+          </li>
+        </dd>
+        <dt><li>scroll</li></dt>
+        <dd>
+          <li type="circle">
+            scroll mirip seperti auto sama-sama memunculkan scroll ketika konten
+            melebihi parentnya.tapi jika konten tidak melebihi paretnya maka
+            scrollnya akan tetap ad
+          </li>
+        </dd>
+      </dl>
+    </section>
+
+    <!-- belajar box-model -->
+    <section class="box-model">
+      <h1 id="box-models" class="judul-box-model"># Box Model</h1>
+      <ul>
+        <li>setiap elemen di halaman berad didalam sebuah box (kotak)</li>
+        <li>kita dapat mengatur ukuran dan posisi pada kotak tersebut</li>
+        <li>
+          kita bisa memberi warna / gambar sebagai background kotak tersebut
+        </li>
+      </ul>
+      <h3>css box-model itu terdiri dari 4 bagian</h3>
+      <dl class="empat-bagian">
+        <dt><li>margin</li></dt>
+        <dd>
+          <li type="circle">
+            area transparan di sekitar kotak (diluar border)
+          </li>
+        </dd>
+        <dt><li>border</li></dt>
+        <dd>
+          <li type="circle">batas di sekeliling konten dan padding</li>
+          <li type="circle">kita dapat mengatur warna dan ukuran</li>
+        </dd>
+        <dt><li>padding</li></dt>
+        <dd>
+          <li type="circle">
+            area transparan di dalam kotak (antara konten dan border)
+          </li>
+        </dd>
+        <dt><li>konten</li></dt>
+        <dd>
+          <li type="circle">
+            konten sebenarnya di dalam box, bisa berupa teks atau gambar
+          </li>
+        </dd>
+      </dl>
+      <p>
+        catatan : yang dapat kita atur propertinya menggunakan css box-model
+        hanya tiga yaitu Margin, Padding, dan border
+      </p>
+
+      <div class="c1">
+        <!-- margin -->
+        <div class="margin">
+          <h3>A. property untuk margin</h3>
+          <p>a. cara pakai margin</p>
+          <dl>
+            <dt><li>margin-top</li></dt>
+            <dd><li type="circle">untuk mengatur ukuran bagian atas</li></dd>
+            <dt><li>margin-right</li></dt>
+            <dd><li type="circle">untuk mengatur ukuran bagian kanan</li></dd>
+            <dt><li>margin-bottom</li></dt>
+            <dd><li type="circle">untuk mengatur ukuran bagian bawah</li></dd>
+            <dt><li>margin-left</li></dt>
+            <dd><li type="circle">untuk mengatur ukuran bagian kiri</li></dd>
+          </dl>
+          <p>b. overlapping margin</p>
+          <ul class="overlapping">
+            <li>
+              jika vertikal margin tidak saling menambahkan, hanya mengambil
+              ukuran yang paling besar saja
+            </li>
+            <li>margin dapat di berikan nilai negatif (-)</li>
+            <li>jika horizontal margin saling menambahkan</li>
+            <li>
+              margin juga dapat di berikan value auto untuk membawa sebuah
+              elemen ke tengah dari pembungkusnya
+            </li>
+          </ul>
+        </div>
+        <!-- padding -->
+        <div class="padding">
+          <h3>B. property untuk padding</h3>
+          <p>a. cara pakai padding</p>
+          <dl>
+            <dt><li>padding-top</li></dt>
+            <dd><li type="circle">untuk mengatur ukuran bagian atas</li></dd>
+            <dt><li>padding-right</li></dt>
+            <dd><li type="circle">untuk mengatur ukuran bagian kanan</li></dd>
+            <dt><li>padding-bottom</li></dt>
+            <dd><li type="circle">untuk mengatur ukuran bagian bawah</li></dd>
+            <dt><li>padding-left</li></dt>
+            <dd><li type="circle">untuk mengatur ukuran bagian kiri</li></dd>
+          </dl>
+          <p>b. overlapping padding</p>
+          <ul>
+            <li>padding tidak memiliki nilai negatif</li>
+            <li>padding tidak memiliki nilai auto</li>
+            <li>padding mempengaruhi ukuran box yang di buat</li>
+            <p>
+              catatan : hati-hati menggunakan pedding karna mempengaruhi ukuran
+              box
+            </p>
+          </ul>
+        </div>
+        <!-- border -->
+        <div class="border">
+          <h3>C. property untuk border</h3>
+          <p class="pakai-border">a. cara pakai border</p>
+          <dl>
+            <dt><li>border-top</li></dt>
+            <dd><li type="circle">untuk mengatur ukuran bagian atas</li></dd>
+            <dt><li>border-right</li></dt>
+            <dd><li type="circle">untuk mengatur ukuran bagian kanan</li></dd>
+            <dt><li>border-bottom</li></dt>
+            <dd><li type="circle">untuk mengatur ukuran bagian bawah</li></dd>
+            <dt><li>border-left</li></dt>
+            <dd><li type="circle">untuk mengatur ukuran bagian kiri</li></dd>
+          </dl>
+          <dl>
+            <dt><li>border memiliki tiga nilai</li></dt>
+            <dd><li type="circle">width : untuk ukuran</li></dd>
+            <dd><li type="circle">style : untuk jenis garis</li></dd>
+            <dd><li type="circle">color : untuk warna</li></dd>
+          </dl>
+          <p class="style-border">
+            b. untuk style ada beberapa yang bisa di pakai
+          </p>
+          <dl>
+            <dt><li>style</li></dt>
+            <dd><li type="circle">solid / garis</li></dd>
+            <dd><li type="circle">dotted / titik-titik</li></dd>
+            <dd><li type="circle">dashed / garis putus-putus</li></dd>
+            <dd><li type="circle">double / garis berlapis dua</li></dd>
+          </dl>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <h4 class="box-sizings">
+        untuk mengatur ukuran kotak agar menyesuaikan terhadap ukuran padding
+        atau border kita dapat menambahkan priperti
+      </h4>
+
+      <ul class="box-sizing">
+        <dt><li>box-sizin: border-box</li></dt>
+        <dd>
+          <li type="circle">
+            box-sizing di tambahkan ke elemen yang memiliki border atau padding
+          </li>
+        </dd>
+      </ul>
+    </section>
+    <!-- belajar flot -->
+
+    <section class="float">
+      <h1 id="judul-float" class="judul-float"># Float</h1>
+      <dl>
+        <dt><h3>A. definisi float</h3></dt>
+        <dd>
+          float merupakan properti pada css untuk mengatur posisi sebuah elemen.
+          sebuah elemen dapat dipaksa untuk berada di sebelah kiri atau kanan
+          dari parentnya/pembungkusnya dengan menggunakan proprty ini.
+        </dd>
+      </dl>
+      <h3 class="value-float">B. value pada float ada tiga</h3>
+      <dl>
+        <dt><li>float</li></dt>
+        <dd><li type="circle">none (ini value default dari float)</li></dd>
+        <dd>
+          <li type="circle">
+            left (ini value untuk membawa elemen ke sebelah kiri parentnya)
+          </li>
+        </dd>
+        <dd>
+          <li type="circle">
+            right (ini value untuk membawa elemen ke sebelah kanan parentnya)
+          </li>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <h3 class="cara-menggunakan-float">C. cara menggunakan</h3>
+        </dt>
+        <dd>
+          <li type="circle">
+            jika suatu elemen di berikan float maka elelemen yang berada di
+            bawahnya akan menggantikan posisinya
+          </li>
+          <li type="circle">
+            jika ingin membuat elemen berjejeran maka harus di berikan float
+            pada elemen yang berada dalam satu kotak
+          </li>
+        </dd>
+      </dl>
+      <h3 class="dilakukan-float">
+        D. yang bisa dilakukan menggunakan properti foalt
+      </h3>
+      <dl>
+        <dt><li>text wrapping</li></dt>
+        <dd>
+          <li type="circle">
+            untuk membuat text mengelilingi gambar/elemen lain
+          </li>
+        </dd>
+        <dt><li>image gallery</li></dt>
+        <dd>
+          <li type="circle">
+            membuat serangkaian gambar menjadi gallery yang rapih
+          </li>
+        </dd>
+        <dt><li>multi-colums layout</li></dt>
+        <dd>
+          <li type="circle">membuat halaman menjadi beberapa kolom</li>
+        </dd>
+        <dt><li>dll</li></dt>
+      </dl>
+      <h3 class="contoh-float">E. contoh</h3>
+      <div class="contoh">
+        <img class="img-contoh" src="img/img1.jpg" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eaque
+          obcaecati tenetur reprehenderit magnam repellendus odio placeat
+          voluptatum amet, neque, porro voluptatem voluptate quisquam debitis
+          culpa unde nemo quaerat ducimus! Error quod cupiditate eaque ipsa
+          autem veniam porro, hic, harum alias suscipit, voluptatem consequuntur
+          nihil a non! Ex,
+        </p>
+      </div>
+      <h3 class="properti-clear">F. properti clear</h3>
+      <p>
+        clear digunakan saat elemen d berikan float tetapi container elemen
+        tersebut tidak muat lagi/over lapping float
+      </p>
+      <dl>
+        <dt>
+          <li>beberapa cara untuk menghentikan/membersihkan float</li>
+        </dt>
+        <dd>
+          <li type="circle">menggunakan properti overflow</li>
+          <li type="circle">menggunakan div kosong</li>
+          <li type="circle">menggunakan teknik micro clearfix</li>
+        </dd>
+      </dl>
+      <h4>a. properti overflow=auto</h4>
+      <p>
+        kita dapat menambahkan overflow=auto pada pada konteinernya agar
+        konteiner menganggap elemen di dalamnya kembali ada. ini bukan solusi
+        paling tepat tapi ini cara mengakalinnya
+      </p>
+      <h4>b. menggunakan div kosong</h4>
+      <p>
+        untuk membersihkan float atau menghentikan float kita menggunakan
+        proprti clear pada css dengan menggunakan div kosong pada html
+      </p>
+      <dl>
+        <dt><li>clear</li></dt>
+        <dd>
+          <li type="circle">left (jika ingin membersihkan float left/kiri)</li>
+        </dd>
+        <dd>
+          <li type="circle">
+            right (jika ingin membersihkan float right/kanan)
+          </li>
+        </dd>
+        <dd>
+          <li type="circle">
+            both (untuk membersihkan kedua float left dan right)
+          </li>
+        </dd>
+      </dl>
+    </section>
+    <!-- belajar position -->
+    <section class="position">
+      <h1 id="judul-position" class="position-judul"># Position</h1>
+      <li>
+        css position ini dapat kita gunakan mengatur tata letak suatu elemen
+        sesuai yang kita inginkan
+      </li>
+      <li>
+        css position hampir mirip dengan margin tetapi margin ketika digunakan
+        elemen di bawahnya juga ikut bergerak jika di gerakkan ke atas/ke bawah
+      </li>
+      <li>
+        sedangkan pisition kita dapat menggerakkan elemen tampa mempengaruhi
+        elemen di sekitarnya
+      </li>
+      <h3 class="value-position">A. value pada properti position</h3>
+      <dl>
+        <dt><li>value dari properti position ada empat bagian</li></dt>
+        <dd>
+          <li type="circle">static</li>
+          <li type="circle">relative</li>
+          <li type="circle">absolute</li>
+          <li type="circle">fixed</li>
+        </dd>
+      </dl>
+      <h3 class="keterangan-value-position">
+        B. keterangan value pada position
+      </h3>
+      <dl>
+        <dt><li>static</li></dt>
+        <dd>
+          <li type="circle">
+            jika kita tidak memberikan properti position pada sebuah elemen maka
+            default dari properti tersebut adalah static
+          </li>
+        </dd>
+        <dt><li>value selain static</li></dt>
+        <dd>
+          <li type="circle">
+            menggunakan position selain static (non-static). akan membuat sebuah
+            elelemen menjadi seolah-olah berbeda dimensi dari eleme lainnya
+            (elelemen melayang)
+          </li>
+          <li type="circle">
+            elelemen yang diberikan position selain static dapat menggunakan
+            properti top, right, bottom, dan left untuk mengatur posisinya
+          </li>
+        </dd>
+      </dl>
+      <dl>
+        <dt><h4>a. relative</h4></dt>
+        <dd>
+          <li type="circle">
+            ketika kita menggerakkan elemen dengan posisi relative (menggunakan
+            properti top, right, bottom, left), ruang yang ditempati oleh elemen
+            tersebut akan masih ada
+          </li>
+          <li type="circle">
+            ketika kita menggerakkan elemen dengan posisi relative, elemen akan
+            bergerak relatif terhadap posisi semulanya
+          </li>
+          <li type="circle">
+            jika kita memberikan properti top :0 ; dan left :0 ; maka elemen
+            tidak berubah posisinya
+          </li>
+          <li type="circle">
+            sebaiknya relative digunakan saat kita hanya ingin memajukan sebuah
+            elemen dan tidak menggerakkannya
+          </li>
+        </dd>
+      </dl>
+      <dl>
+        <dt><h4>b. absolute</h4></dt>
+        <dd>
+          <li type="circle">
+            ketika kita menggerakkan elemen dengan posisi absolute (menggunakan
+            properti top, right, bottom, left), ruang yang ditempati oleh elemen
+            tersebut dianggap tidak ada
+          </li>
+          <li type="circle">
+            ketika kita menggerakkan elemen dengan posisi absolute (menggunakan
+            properti top, right, bottom, left), ruang yang ditempati oleh elemen
+            tersebut dapat digantikan oleh elemen lainya
+          </li>
+          <li type="circle">
+            ketika kita menggerakkan elemen dengan posisi absolute, elemen akan
+            bergerak relatif terhadap posisi parentnya/konteinernya
+          </li>
+          <li type="circle">
+            ketika kita menggerakkan elemen dengan posisi absolute,jika kita
+            tidak ingin elemen tersebut keluar dari parentnya. parentnya juga
+            kita harus berikan posision relatif (agar nyangkut)
+          </li>
+        </dd>
+      </dl>
+      <dl>
+        <dt><h4>c. fixed</h4></dt>
+        <dd>
+          <li type="circle">
+            kietika kita memberikan elemen dengan posisi fixed, maka elemen
+            tersebut tidak akan berpindah tempat walaupun layar monitor di
+            scroll
+          </li>
+        </dd>
+      </dl>
+      <h2 class="z-index">C. z-index</h2>
+      <dl>
+        <dd>
+          <li type="circle">
+            z-index digunakan untuk mengatur tumpukan pada elemen yang diberikan
+            position
+          </li>
+        </dd>
+      </dl>
+      <p>
+        catatan : ketika kita memberikan posisi non-statik dan menggunakan
+        properti (top, right, botton, dan left) properti tersebut dapat di
+        berikan nilai negative (-)
+      </p>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="social">
+        <a href=""><i data-feather="youtube"></i></a>
+        <a href=""><i data-feather="instagram"></i></a>
+        <a href=""><i data-feather="facebook"></i></a>
+        <a href=""><i data-feather="twitter"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#dimensidanoverflow">dimensi</a>
+        <a href="#box-models">box-model</a>
+        <a href="#judul-float">float</a>
+        <a href="#judul-position">position</a>
+      </div>
+
+      <div class="credit">
+        <p>created by <a href="#">muhammad akbar</a>. | &copy; 2023.</p>
+      </div>
+    </footer>
+    <!-- feather icon -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
